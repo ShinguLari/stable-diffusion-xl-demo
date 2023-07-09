@@ -296,6 +296,10 @@ with block:
                 </h1>
               </div>
               <p style="margin-bottom: 10px; font-size: 94%; line-height: 23px;">
+                 新宮ラリのAIシンギュラリティー : <a style="text-decoration: underline;" href="https://www.youtube.com/channel/@aisinguularity">https://www.youtube.com/channel/@aisinguularity</a>
+				<br/>
+				気に入ったらコーヒーを買ってサポートしてくださいね : <a style="text-decoration: underline;" href="https://www.buymeacoffee.com/shinguulari">https://www.buymeacoffee.com/shinguulari</a>
+				<br/>
                 Stable Diffusion XL 0.9 is the latest text-to-image model from StabilityAI. 
                 <a style="text-decoration: underline;" href="https://huggingface.co/spaces/stabilityai/stable-diffusion">Access SD v2.1 Space</a> <a style="text-decoration: underline;" href="https://huggingface.co/spaces/stabilityai/stable-diffusion-1">SD v1 Space</a>
                 <br/>
