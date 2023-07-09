@@ -296,7 +296,7 @@ with block:
                 </h1>
               </div>
               <p style="margin-bottom: 10px; font-size: 94%; line-height: 23px;">
-                 新宮ラリのAIシンギュラリティー : <a style="text-decoration: underline;" href="https://www.youtube.com/channel/@aisinguularity">https://www.youtube.com/channel/@aisinguularity</a>
+                 新宮ラリのAIシンギュラリティー : <a style="text-decoration: underline;" href="https://www.youtube.com/@aisinguularity">https://www.youtube.com/@aisinguularity</a>
 				<br/>
 				気に入ったらコーヒーを買ってサポートしてくださいね : <a style="text-decoration: underline;" href="https://www.buymeacoffee.com/shinguulari">https://www.buymeacoffee.com/shinguulari</a>
 				<br/>
@@ -322,7 +322,7 @@ with block:
                         label="プロンプトを入れる",
                         show_label=False,
                         max_lines=1,
-                        placeholder="Enter your prompt",
+                        placeholder="プロンプトを入れる",
                         elem_id="prompt-text-input",
                     ).style(
                         border=(True, False, True, True),
@@ -333,7 +333,7 @@ with block:
                         label="ネガティブプロンプトを入れる",
                         show_label=False,
                         max_lines=1,
-                        placeholder="Enter a negative prompt",
+                        placeholder="ネガティブプロンプトを入れる",
                         elem_id="negative-prompt-text-input",
                     ).style(
                         border=(True, False, True, True),
@@ -366,7 +366,7 @@ with block:
             else:
                 refiner_strength = gr.Slider(label="リファイナー強度 (リファイナー無効)", minimum=0, maximum=0, value=0, step=0)
             guidance_scale = gr.Slider(
-                label="ガイダンス・スケール", minimum=0, maximum=50, value=9, step=0.1
+                label="ガイダンス・スケールCFG", minimum=0, maximum=50, value=9, step=0.1
             )
         #    seed = gr.Slider(
         #        label="Seed",
