@@ -292,18 +292,18 @@ with block:
                   <rect x="23" y="69" width="23" height="23" fill="black"></rect>
                 </svg>
                 <h1 style="font-weight: 900; margin-bottom: 7px;margin-top:5px">
-                  Stable Diffusion XL 0.9 デモ
+                  Stable Diffusion XL 0.9 Demo
                 </h1>
               </div>
               <p style="margin-bottom: 10px; font-size: 94%; line-height: 23px;">
-                 AI Youtuberの新宮ラリです : <a style="text-decoration: underline;" href="https://www.youtube.com/@aisinguularity">https://www.youtube.com/@aisinguularity</a>
+                 Hey I'm Japanese AI Youtube Shingu Lari. Please subscribe my channel: <a style="text-decoration: underline;" href="https://www.youtube.com/@aisinguularity">https://www.youtube.com/@aisinguularity</a>
 				<br/>
-				気に入ったらコーヒーを買ってサポートしてくださいね : <a style="text-decoration: underline;" href="https://www.buymeacoffee.com/shinguulari">https://www.buymeacoffee.com/shinguulari</a>
+				If you like this support me to buy a coffer : <a style="text-decoration: underline;" href="https://www.buymeacoffee.com/shinguulari">https://www.buymeacoffee.com/shinguulari</a>
 				<br/>
-                Stable Diffusion XL 0.9は、StabilityAIの最新のテキスト画像変換モデルです。 
+                Stable Diffusion XL 0.9 is the latest text-to-image model from StabilityAI. 
                 <a style="text-decoration: underline;" href="https://huggingface.co/spaces/stabilityai/stable-diffusion">Access SD v2.1 Space</a> <a style="text-decoration: underline;" href="https://huggingface.co/spaces/stabilityai/stable-diffusion-1">SD v1 Space</a>
                 <br/>
-                より高速な生成とAPIアクセスには
+                For faster generation and API access you can try
                 <a
                   href="http://beta.dreamstudio.ai/"
                   style="text-decoration: underline;"
@@ -319,10 +319,10 @@ with block:
             with gr.Row(elem_id="prompt-container").style(mobile_collapse=False, equal_height=True):
                 with gr.Column():
                     text = gr.Textbox(
-                        label="プロンプトを入れる",
+                        label="Enter your prompt",
                         show_label=False,
                         max_lines=1,
-                        placeholder="プロンプトを入れる",
+                        placeholder="Enter your prompt",
                         elem_id="prompt-text-input",
                     ).style(
                         border=(True, False, True, True),
@@ -330,17 +330,17 @@ with block:
                         container=False,
                     )
                     negative = gr.Textbox(
-                        label="ネガティブプロンプトを入れる",
+                        label="Enter a negative prompt",
                         show_label=False,
                         max_lines=1,
-                        placeholder="ネガティブプロンプトを入れる",
+                        placeholder="Enter a negative prompt",
                         elem_id="negative-prompt-text-input",
                     ).style(
                         border=(True, False, True, True),
                         rounded=(True, False, False, True),
                         container=False,
                     )
-                btn = gr.Button("画像を生成").style(
+                btn = gr.Button("Generate image").style(
                     margin=False,
                     rounded=(False, True, True, False),
                     full_width=False,
@@ -357,16 +357,16 @@ with block:
                 loading_icon = gr.HTML(loading_icon_html)
                 share_button = gr.Button("Share to community", elem_id="share-btn")
 
-        with gr.Accordion("詳細設定", open=False):
+        with gr.Accordion("Advanced settings", open=False):
         #    gr.Markdown("Advanced settings are temporarily unavailable")
-            samples = gr.Slider(label="画像数", minimum=1, maximum=4, value=4, step=1)
-            steps = gr.Slider(label="ステップ", minimum=1, maximum=250, value=50, step=1)
+            samples = gr.Slider(label="Images", minimum=1, maximum=4, value=4, step=1)
+            steps = gr.Slider(label="Steps", minimum=1, maximum=250, value=50, step=1)
             if enable_refiner:
-                refiner_strength = gr.Slider(label="リファイナー強度", minimum=0, maximum=1.0, value=0.3, step=0.1)
+                refiner_strength = gr.Slider(label="Refiner Strength", minimum=0, maximum=1.0, value=0.3, step=0.1)
             else:
-                refiner_strength = gr.Slider(label="リファイナー強度 (リファイナー無効)", minimum=0, maximum=0, value=0, step=0)
+                refiner_strength = gr.Slider(label="Refiner Strength (refiner not enabled)", minimum=0, maximum=0, value=0, step=0)
             guidance_scale = gr.Slider(
-                label="ガイダンス・スケールCFG", minimum=0, maximum=50, value=9, step=0.1
+                label="Guidance Scale/CFG", minimum=0, maximum=50, value=9, step=0.1
             )
         #    seed = gr.Slider(
         #        label="Seed",
